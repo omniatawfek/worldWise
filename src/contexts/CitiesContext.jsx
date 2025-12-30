@@ -1,7 +1,13 @@
 /* eslint-disable react-refresh/only-export-components */
 /* eslint-disable react/prop-types */
 
-import { useEffect, createContext, useContext, useReducer } from "react";
+import {
+  useEffect,
+  createContext,
+  useContext,
+  useReducer,
+  useCallback,
+} from "react";
 import { convertToEmoji } from "../components/Form";
 
 const BASE_URL = "http://localhost:8000";
@@ -72,24 +78,26 @@ function CitiesProvider({ children }) {
     }
     fetchCities();
   }, []);
-  async function getCity(id) {
-    console.log(id, currentCity.id);
-    if (id === currentCity.id) return;
-    dispatch({ type: "loading" });
-    try {
-      const res = await fetch(`${BASE_URL}/cities/${id}`);
-      const data = await res.json();
-      dispatch({
-        type: "city/loaded",
-        payload: { ...data, emoji: convertToEmoji(data.emoji) },
-      });
-    } catch {
-      dispatch({
-        type: "rejected",
-        payload: "There was an error loading the city ...",
-      });
-    }
-  }
+  const getCity = useCallback(
+    async function getCity(id) {
+      if (id === currentCity.id) return;
+      dispatch({ type: "loading" });
+      try {
+        const res = await fetch(`${BASE_URL}/cities/${id}`);
+        const data = await res.json();
+        dispatch({
+          type: "city/loaded",
+          payload: { ...data, emoji: convertToEmoji(data.emoji) },
+        });
+      } catch {
+        dispatch({
+          type: "rejected",
+          payload: "There was an error loading the city ...",
+        });
+      }
+    },
+    [currentCity.id]
+  );
   async function createCity(newCity) {
     dispatch({ type: "loading" });
     try {
