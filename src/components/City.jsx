@@ -29,16 +29,14 @@ function City() {
   //   notes: "My favorite city so far!",
   // };
 
-  const { cityName, emoji = "", date, notes } = currentCity;
+  const { cityName, date, notes } = currentCity;
   if (isLoading || !currentCity) return <Spinner />;
 
   return (
     <div className={styles.city}>
       <div className={styles.row}>
         <h6>City name</h6>
-        <h3>
-          <span>{emoji}</span> {cityName}
-        </h3>
+        <h3>{cityName}</h3>
       </div>
 
       <div className={styles.row}>

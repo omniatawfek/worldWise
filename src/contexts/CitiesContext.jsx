@@ -8,7 +8,6 @@ import {
   useReducer,
   useCallback,
 } from "react";
-import { convertToEmoji } from "../components/Form";
 
 const BASE_URL = "http://localhost:8000";
 const CitiesContext = createContext();
@@ -63,7 +62,6 @@ function CitiesProvider({ children }) {
         const data = await res.json();
         const formattedCities = data.map((city) => ({
           ...city,
-          emoji: convertToEmoji(city.emoji),
         }));
 
         dispatch({ type: "cities/loaded", payload: formattedCities });
@@ -87,7 +85,7 @@ function CitiesProvider({ children }) {
         const data = await res.json();
         dispatch({
           type: "city/loaded",
-          payload: { ...data, emoji: convertToEmoji(data.emoji) },
+          payload: { ...data },
         });
       } catch {
         dispatch({
@@ -113,7 +111,6 @@ function CitiesProvider({ children }) {
         type: "city/created",
         payload: {
           ...data,
-          emoji: convertToEmoji(data.emoji),
         },
       });
     } catch {

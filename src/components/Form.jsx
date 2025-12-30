@@ -1,5 +1,3 @@
-/* eslint-disable no-unused-vars */
-
 import { useEffect, useState } from "react";
 import styles from "./Form.module.css";
 import Button from "./Button";
@@ -11,14 +9,6 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { useCities } from "../contexts/CitiesContext";
 import { useNavigate } from "react-router-dom";
-export function convertToEmoji(countryCode) {
-  const codePoints = countryCode
-    ?.toUpperCase()
-    .split("")
-    .map((char) => 127397 + char.charCodeAt());
-
-  return codePoints ? String.fromCodePoint(...codePoints) : "";
-}
 
 const BASE_URL = "https://api.bigdatacloud.net/data/reverse-geocode-client";
 function Form() {
@@ -29,7 +19,6 @@ function Form() {
   const [country, setCountry] = useState("");
   const [date, setDate] = useState(new Date());
   const [notes, setNotes] = useState("");
-  const [emoji, setEmoji] = useState();
   const [geocodingError, setGeeocodingError] = useState("");
   const [isLoadingGeocoding, setIsLoadingGeocoding] = useState(false);
   useEffect(
@@ -51,7 +40,6 @@ function Form() {
 
           setCityName(data.city || data.locality || "");
           setCountry(data.countryName);
-          setEmoji(convertToEmoji(data.countryode));
         } catch (err) {
           setGeeocodingError(err.message);
         } finally {
@@ -68,7 +56,6 @@ function Form() {
     const newCity = {
       cityName,
       country,
-      emoji,
       date,
       notes,
       position: { lat, lng },
@@ -93,7 +80,6 @@ function Form() {
           onChange={(e) => setCityName(e.target.value)}
           value={cityName}
         />
-        <span className={styles.flag}>{emoji}</span>
       </div>
 
       <div className={styles.row}>

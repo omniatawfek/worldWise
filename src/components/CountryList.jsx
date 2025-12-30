@@ -3,7 +3,6 @@ import styles from "./CountryList.module.css";
 import Spinner from "./Spinner";
 import Message from "./Message";
 import { useCities } from "../contexts/CitiesContext";
-/* eslint-disable react/prop-types */
 
 function CountryList() {
   const { cities, isLoading } = useCities();
@@ -15,7 +14,7 @@ function CountryList() {
     );
   const countries = cities.reduce((arr, city) => {
     if (!arr.map((el) => el.country).includes(city.country))
-      return [...arr, { country: city.country, emoji: city.emoji }];
+      return [...arr, { country: city.countr }];
     else return arr;
   }, []);
   return (
