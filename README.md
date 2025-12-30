@@ -92,26 +92,26 @@ src/
 ├── hooks/
 ├── App.jsx
 ├── main.jsx
+
 🚀 How to Run the Project Locally
 Clone the repository:
 
 bash
-Copy code
 git clone https://github.com/your-username/worldwise.git
+
 Install dependencies:
 
 bash
-Copy code
 npm install
+
 Start the fake API server:
 
 bash
-Copy code
 npm run server
+
 Run the development server:
 
 bash
-Copy code
 npm run dev
 
 🎯 Learning Outcome
@@ -131,4 +131,5 @@ Production-ready React applications
 Omnia Tawfek
 
 Feel free to explore the project, review the code, and provide feedback.
+
 ```
