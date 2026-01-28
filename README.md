@@ -6,14 +6,6 @@ The project focuses on building a real-world Single Page Application (SPA) while
 
 ---
 
-## 🔗 Live Demo
-
-🚀 You can try the application here:
-
-- **Live Demo:** https://9wvspztv-5173.uks1.devtunnels.ms/
-
----
-
 ## 📌 Project Overview
 
 The WorldWise application enables users to:
