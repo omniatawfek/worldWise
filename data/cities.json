@@ -1,39 +1,14 @@
 {
   "cities": [
     {
-      "id": "8b56",
-      "cityName": "Mosnac",
-      "country": "France",
-      "emoji": "",
-      "date": "2025-12-20T12:49:20.202Z",
-      "notes": "",
-      "position": {
-        "lat": "45.50943749187309",
-        "lng": "-0.5273437500000001"
-      }
-    },
-    {
-      "id": "6a86",
-      "cityName": "Cairo",
+      "id": "9b40",
+      "cityName": "Markaz al Waḩat ad Dakhilah",
       "country": "Egypt",
-      "emoji": "",
-      "date": "2025-12-23T17:14:50.671Z",
-      "notes": "my home\n",
-      "position": {
-        "lat": "30.102801161110328",
-        "lng": "31.772460937500004"
-      }
-    },
-    {
-      "id": "46b7",
-      "cityName": "Giswil",
-      "country": "Switzerland",
-      "emoji": "",
-      "date": "2025-12-23T17:35:10.953Z",
+      "date": "2026-01-28T21:17:25.277Z",
       "notes": "",
       "position": {
-        "lat": "46.8133956296919",
-        "lng": "8.126432385145247"
+        "lat": "26.128860867957496",
+        "lng": "29.333496093750004"
       }
     }
   ]
