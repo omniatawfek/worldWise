@@ -14,7 +14,7 @@ function CountryList() {
     );
   const countries = cities.reduce((arr, city) => {
     if (!arr.map((el) => el.country).includes(city.country))
-      return [...arr, { country: city.countr }];
+      return [...arr, { country: city.country }];
     else return arr;
   }, []);
   return (

@@ -1,18 +1,6 @@
 {
   "cities": [
     {
-      "cityName": "Lisbon",
-      "country": "Portugal",
-      "emoji": "🇵🇹",
-      "date": "2027-10-31T15:59:59.138Z",
-      "notes": "My favorite city so far!",
-      "position": {
-        "lat": 38.727881642324164,
-        "lng": -9.140900099907554
-      },
-      "id": "73930385"
-    },
-    {
       "id": "8b56",
       "cityName": "Mosnac",
       "country": "France",
@@ -22,18 +10,6 @@
       "position": {
         "lat": "45.50943749187309",
         "lng": "-0.5273437500000001"
-      }
-    },
-    {
-      "id": "d69e",
-      "cityName": "Brains-sur-Gee",
-      "country": "France",
-      "emoji": "",
-      "date": "2025-12-20T19:03:10.065Z",
-      "notes": "",
-      "position": {
-        "lat": "48.0060573154898",
-        "lng": "-0.04946439208742604"
       }
     },
     {
