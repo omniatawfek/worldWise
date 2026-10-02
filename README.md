@@ -6,6 +6,12 @@ The project focuses on building a real-world Single Page Application (SPA) while
 
 ---
 
+## live Demo
+
+https://world-wise-sepia.vercel.app/
+
+---
+
 ## 📌 Project Overview
 
 The WorldWise application enables users to:
